@@ -91,6 +91,34 @@ void qtSeti::createActions()
 	computingPreferencesAct = new QAction(tr("&Computing Preferences..."), this);
 
 
+	runAlwaysAct = new QAction(tr("&Run always"), this);
+
+	runPreferencesAct = new QAction(tr("Run based on preferences"), this);
+
+	runSuspendAct = new QAction(tr("&Suspend"), this);
+
+	networkAlwaysAct = new QAction(tr("Network activity always availible"), this);
+
+	networkPreferencesAct = new QAction(tr("Network activity based on preferences"), this);
+
+	networkSuspendAct = new QAction(tr("Network activity suspended"), this);
+
+
+	selecComputerAct = new QAction(tr("Select computer..."), this);
+
+	shutdownClientAct = new QAction(tr("Shut down connected client..."), this);
+
+	runBenchmarksAct = new QAction(tr("Run CPU benchmarks"), this);
+
+	doNetworkCommunicationAct = new QAction(tr("Do network communication"), this);
+
+	readConfigAct = new QAction(tr("Read config file"), this);
+
+	readLocalPrefAct = new QAction(tr("Read local prefs file"), this);
+
+	launchAnotherAct = new QAction(tr("Launch another qtBoinc manager"), this);
+
+
 	aboutAct = new QAction(tr("&About"), this);
 	aboutAct->setStatusTip(tr("Show the application's About box"));
 	connect(aboutAct, SIGNAL(triggered()), this, SLOT(about()));
@@ -124,8 +152,21 @@ void qtSeti::createMenus()
 	toolsMenu->addAction(computingPreferencesAct);
 
 	activityMenu = menuBar()->addMenu(tr("&Activity"));
+	activityMenu->addAction(runAlwaysAct);
+	activityMenu->addAction(runPreferencesAct);
+	activityMenu->addAction(runSuspendAct);
+	activityMenu->addAction(networkAlwaysAct);
+	activityMenu->addAction(networkPreferencesAct);
+	activityMenu->addAction(networkSuspendAct);
 
- 	advancedMenu = menuBar()->addMenu(tr("A&dvanced"));
+	advancedMenu = menuBar()->addMenu(tr("A&dvanced"));
+	advancedMenu->addAction(selecComputerAct);
+	advancedMenu->addAction(shutdownClientAct);
+	advancedMenu->addAction(runBenchmarksAct);
+	advancedMenu->addAction(doNetworkCommunicationAct);
+	advancedMenu->addAction(readConfigAct);
+	advancedMenu->addAction(readLocalPrefAct);
+	advancedMenu->addAction(launchAnotherAct);
 
 	helpMenu = menuBar()->addMenu(tr("&Help"));
 	helpMenu->addAction(aboutAct);
