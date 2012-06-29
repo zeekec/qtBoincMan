@@ -1,11 +1,11 @@
 #include <QtGui/QApplication>
-#include "qtSeti.h"
+#include "qtBoincMan.h"
 
 
 int main(int argc, char **argv)
 {
-	QApplication app(argc, argv);
-	qtSeti foo;
-	foo.show();
-	return app.exec();
+	QApplication boinc_man_app(argc, argv);
+	qtBoincMan boinc_man_window;
+	boinc_man_window.show();
+	return boinc_man_app.exec();
 }

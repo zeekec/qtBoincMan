@@ -1,14 +1,14 @@
-#ifndef qtSeti_H
-#define qtSeti_H
+#ifndef qtBoincMan_H
+#define qtBoincMan_H
 
 #include <QtGui/QMainWindow>
 
-class qtSeti : public QMainWindow
+class qtBoincMan : public QMainWindow
 {
 	Q_OBJECT
 public:
-	qtSeti();
-	virtual ~qtSeti();
+	qtBoincMan();
+	virtual ~qtBoincMan();
 
 
 private slots:
@@ -65,4 +65,4 @@ private:
 
 };
 
-#endif // qtSeti_H
+#endif // qtBoincMan_H

@@ -2,10 +2,10 @@
 BuildItems=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x01\x00\x00\x00\x0c\x00q\x00t\x00S\x00e\x00t\x00i)
 
 [CMake]
-BuildDirs=/home/zeekec/projects/qtSeti/build-debug/
+BuildDirs=/home/zeekec/projects/qtBoincMan/build-debug/
 CMakeDir=/usr/share/cmake/Modules
 Current CMake Binary=file:///usr/bin/cmake
-CurrentBuildDir=file:///home/zeekec/projects/qtSeti/build-debug/
+CurrentBuildDir=file:///home/zeekec/projects/qtBoincMan/build-debug/
 CurrentBuildType=Debug
 CurrentInstallDir=
 Extra Arguments=
@@ -27,7 +27,7 @@ Dependency Action=Build
 EnvironmentGroup=default
 Executable=
 External Terminal=konsole --noclose --workdir %workdir -e %exe
-Project Target=qtSeti,qtSeti
+Project Target=qtBoincMan,qtBoincMan
 Use External Terminal=false
 Working Directory=
 isExecutable=false

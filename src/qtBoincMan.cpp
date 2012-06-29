@@ -1,4 +1,4 @@
-#include "qtSeti.h"
+#include "qtBoincMan.h"
 
 
 #include <QtGui>
@@ -8,7 +8,7 @@
 #include <QtGui/QAction>
 #include <QtGui/QMessageBox>
 
-qtSeti::qtSeti()
+qtBoincMan::qtBoincMan()
 {
 	tabWidget = new QTabWidget;
 	tabWidget->addTab(new QLabel("Notices", this), tr("Notices"));
@@ -27,10 +27,10 @@ qtSeti::qtSeti()
 	resize(480, 320);
 }
 
-qtSeti::~qtSeti()
+qtBoincMan::~qtBoincMan()
 {}
 
-void qtSeti::about()
+void qtBoincMan::about()
 {
 	QMessageBox::about(this, tr("About Menu"),
 	                   tr("The <b>Menu</b> example shows how to create "
@@ -39,7 +39,7 @@ void qtSeti::about()
 
 
 
-void qtSeti::createActions()
+void qtBoincMan::createActions()
 {
 	closeAct = new QAction(tr("&Close"), this);
 	closeAct->setShortcuts(QKeySequence::Close);
@@ -129,7 +129,7 @@ void qtSeti::createActions()
 
 }
 
-void qtSeti::createMenus()
+void qtBoincMan::createMenus()
 {
 	fileMenu = menuBar()->addMenu(tr("&File"));
 	fileMenu->addAction(closeAct);
@@ -174,4 +174,4 @@ void qtSeti::createMenus()
 
 }
 
-#include "qtSeti.moc"
+#include "qtBoincMan.moc"

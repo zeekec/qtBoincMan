@@ -1,15 +1,15 @@
 
-project(qtSeti)
+project(qtBoincMan)
 
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 2.8)
 find_package(Qt4 REQUIRED)
 
 include_directories(${QT_INCLUDES} ${CMAKE_CURRENT_BINARY_DIR})
 
-set(qtSeti_SRCS src/qtSeti.cpp src/main.cpp)
+set(qtBoincMan_SRCS src/qtBoincMan.cpp src/main.cpp)
 
-qt4_automoc(${qtSeti_SRCS})
+qt4_automoc(${qtBoincMan_SRCS})
 
-add_executable(qtSeti ${qtSeti_SRCS})
+add_executable(qtBoincMan ${qtBoincMan_SRCS})
 
-target_link_libraries(qtSeti ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY})
+target_link_libraries(qtBoincMan ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY})
