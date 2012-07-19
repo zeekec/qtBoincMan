@@ -1,27 +1,34 @@
+
+/*
+    qtBoincMan reimplements the default BOINC manager in QT.
+    Copyright (C) 2012  Erik Zeek <zeekec@mad.scientist.com>
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
 #include "qtBoincMan.h"
 
+#include "NoticeTab.h"
 
 #include <QtGui>
-#include <QtGui/QLabel>
-#include <QtGui/QMenu>
-#include <QtGui/QMenuBar>
-#include <QtGui/QAction>
-#include <QtGui/QMessageBox>
 
 qtBoincMan::qtBoincMan()
 {
-	tabWidget = new QTabWidget;
-	tabWidget->addTab(new QLabel("Notices", this), tr("Notices"));
-	tabWidget->addTab(new QLabel("Projects", this), tr("Projects"));
-	tabWidget->addTab(new QLabel("Tasks", this), tr("Tasks"));
-	tabWidget->addTab(new QLabel("Transfers", this), tr("Transfers"));
-	tabWidget->addTab(new QLabel("Statistics", this), tr("Statistics"));
-	tabWidget->addTab(new QLabel("Disk", this), tr("Disk"));
-	tabWidget->addTab(new QLabel("Log", this), tr("Log"));
-	setCentralWidget(tabWidget);
-
 	createActions();
 	createMenus();
+	createTabs();
 
 	setMinimumSize(160, 160);
 	resize(480, 320);
@@ -37,6 +44,19 @@ void qtBoincMan::about()
 	                      "menu-bar menus and context menus."));
 }
 
+void qtBoincMan::createTabs()
+{
+	tabWidget = new QTabWidget;
+	tabWidget->addTab(new NoticeTab(this), tr("Notices"));
+	tabWidget->addTab(new QLabel("Projects", this), tr("Projects"));
+	tabWidget->addTab(new QLabel("Tasks", this), tr("Tasks"));
+	tabWidget->addTab(new QLabel("Transfers", this), tr("Transfers"));
+	tabWidget->addTab(new QLabel("Statistics", this), tr("Statistics"));
+	tabWidget->addTab(new QLabel("Disk", this), tr("Disk"));
+	tabWidget->addTab(new QLabel("Log", this), tr("Log"));
+
+	setCentralWidget(tabWidget);
+}
 
 
 void qtBoincMan::createActions()
@@ -175,3 +195,5 @@ void qtBoincMan::createMenus()
 }
 
 #include "qtBoincMan.moc"
+
+// kate: indent-mode cstyle; indent-width 4; replace-tabs off; tab-width 4;

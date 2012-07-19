@@ -18,16 +18,21 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-#include <QtGui/QApplication>
-#include "qtBoincMan.h"
 
+#include "NoticeTab.h"
 
-int main(int argc, char **argv)
+#include <QVBoxLayout>
+
+NoticeTab::NoticeTab(QWidget *parent, Qt::WindowFlags f): QWidget(parent, f)
 {
-	QApplication boinc_man_app(argc, argv);
-	qtBoincMan boinc_man_window;
-	boinc_man_window.show();
-	return boinc_man_app.exec();
+	notices = new QTextEdit(this);
+	QVBoxLayout *mainLayout = new QVBoxLayout;
+	mainLayout->addWidget(notices);
+	setLayout(mainLayout);
+
+	notices->setText("<b>Notices go here!</b>");
 }
+
+#include "NoticeTab.moc"
 
 // kate: indent-mode cstyle; indent-width 4; replace-tabs off; tab-width 4;

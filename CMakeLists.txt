@@ -6,7 +6,7 @@ find_package(Qt4 REQUIRED)
 
 include_directories(${QT_INCLUDES} ${CMAKE_CURRENT_BINARY_DIR})
 
-set(qtBoincMan_SRCS src/qtBoincMan.cpp src/main.cpp)
+set(qtBoincMan_SRCS src/ProjectsTab.cpp src/NoticeTab.cpp src/qtBoincMan.cpp src/main.cpp)
 
 qt4_automoc(${qtBoincMan_SRCS})
 

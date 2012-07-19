@@ -1,6 +1,5 @@
-
 /*
-    qtBoincMan reimplements the default BOINC manager in QT.
+    <one line to give the program's name and a brief idea of what it does.>
     Copyright (C) 2012  Erik Zeek <zeekec@mad.scientist.com>
 
     This program is free software; you can redistribute it and/or modify
@@ -18,16 +17,12 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-#include <QtGui/QApplication>
-#include "qtBoincMan.h"
 
+#include "ProjectsTab.h"
 
-int main(int argc, char **argv)
+ProjectsTab::ProjectsTab(QWidget *parent, Qt::WindowFlags f): QWidget()
 {
-	QApplication boinc_man_app(argc, argv);
-	qtBoincMan boinc_man_window;
-	boinc_man_window.show();
-	return boinc_man_app.exec();
+
 }
 
-// kate: indent-mode cstyle; indent-width 4; replace-tabs off; tab-width 4;
+#include "ProjectsTab.moc"
